@@ -1,0 +1,113 @@
+
+@mixin aligns{
+    display: flex;
+    align-items: center;
+}
+@mixin shadow {
+    box-shadow: 1px 1px 1px 1px gray;
+    width: 18rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    margin: 1.5rem;
+    border-radius: 8px;
+}
+.shop{
+    display: flex;
+    flex-direction: column;
+}
+.Mes{
+    background: black;
+    opacity: 0.7;
+    padding-top:10rem;
+    height: 28rem;
+    color: white;
+}
+.shopTop{
+    text-align: center;
+    background-size:cover;
+    width:auto;
+    height: 28rem;
+    background-position:50% 50%;
+    font-size: 26px;
+    background-image: url('../assets/images/spain.jpg');
+}
+.shopMain{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+    .shopLeft{
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   flex-wrap: wrap;
+   flex: 50%;
+    gap: 2rem;
+        .productsCard{
+            box-shadow: 1px 1px 1px 1px gray;
+            border-radius: 8px;
+            height: 26rem;
+            padding-top: 1rem;
+            width: 24rem;
+            text-align: center;
+            background-color: #FCF6F1;
+            hr{
+                width: 16rem;
+            }
+            img{
+                width: 20rem;
+                height: 16rem; 
+                border-radius: 12px;
+                box-shadow: 1px 1px 2px 2px gray;
+            }
+        }
+      
+          
+    }
+   
+    .cart{
+        @include shadow;
+        height: 9rem;
+    }
+    .search{
+        background-color: #f7c9b7;
+        @include shadow;
+        height: 12rem;
+    .inputs{
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            .searchInput{
+                flex-grow: 2;
+                width: 240px;
+                padding: 15px;
+                box-shadow: 2px 2px 2px 2px gray;
+                border: none;
+                border-radius: 8px;
+            }
+            .searchBtn{
+                background-color: #D85726;
+                border: none;
+                height: 46px;
+                width: 44px;
+                margin-left: -44px;
+                border-radius:0px 8px 8px 0px;
+            }
+        }   
+    }
+    .categories{
+        @include shadow;
+        height: 18rem;
+        line-height: 105%
+    }
+    .categories p:hover{
+        background-color: #f7c9b7;
+        color: #D85726;
+        padding-left: 12px;
+        width: 240px;
+        height: 20px
+    }
+    .filter{
+        @include shadow;
+        height: 12rem;
+    }
+}
