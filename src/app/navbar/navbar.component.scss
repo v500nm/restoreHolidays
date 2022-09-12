@@ -1,0 +1,33 @@
+@mixin aligns{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar {
+    @include aligns;
+    height: 6.8rem;
+    .navLeft{
+        img{
+            height: 6rem;
+            width: 100%;
+        }
+    }
+    .navMiddle{
+        font-size: 18px;
+        ul li{
+            display: inline;
+            padding: 0.8rem;
+            cursor: pointer;
+        }
+        li:hover{
+            color: orangered;
+        }
+    }
+    .navRight{
+        @include aligns;
+        padding-right: 1.6rem;
+        .Sicon{
+            padding-right: 1.4rem;
+        }
+    }
+}
